@@ -1,3 +1,5 @@
 *.file.RDS.yaml
 /.R*/
 /volDocker/
+/Icon/
+/ANTI/
