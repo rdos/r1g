@@ -1,0 +1,7 @@
+#!/bin/bash
+. ~/.bash_aliases
+./RunDocker-gitlab.sh   
+./RunDocker-rancher.sh  
+
+
+sudo doker ps 	
