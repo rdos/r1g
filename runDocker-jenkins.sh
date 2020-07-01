@@ -1,9 +1,9 @@
 #!/bin/bash
 # bash -x
-CONTAINER_NAME="gitlab/gitlab-ee"
+CONTAINER_NAME="jenkins/jenkins"
 sudo docker stop "$(sudo docker ps -q  --filter ancestor=$CONTAINER_NAME --format="{{.ID}}")" 2>/dev/null
 
-
+docker run -d -v jenkins_home:/var/jenkins_home -p 8080:8080 -p 50000:50000 :lts
 sudo docker run -d \
 -p 8000:80 \
 -p 22:22 \

@@ -5,10 +5,11 @@ sudo docker stop "$(sudo docker ps -q  --filter ancestor=$CONTAINER_NAME --forma
 # //TODO: │always!!!
 
 sudo docker run -d --restart=unless-stopped \
--p 443:443 \
--p 80:80 \
+-p 4043:443 \
+-p 8001:80 \
 -v $(pwd)/./volDocker/rancher/var/lib/mysql:/var/lib/mysql --restart=unless-stopped \
-rancher/server 
+$CONTAINER_NAME
+# rancher/server 
 	
 # --db-host localhost  --db-port 3306 --db-user root --db-pass Ww123456 --db-name cattle
 
