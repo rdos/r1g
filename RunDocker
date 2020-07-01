@@ -4,4 +4,4 @@
 ./RunDocker-rancher.sh  
 
 
-sudo doker ps 	
+sudo docker ps 	
