@@ -1,5 +1,5 @@
 #!/bin/bash
-# bash -x
+set -x
 CONTAINER_NAME="gitlab/gitlab-ee"
 sudo docker stop "$(sudo docker ps -q  --filter ancestor=$CONTAINER_NAME --format="{{.ID}}")" 2>/dev/null
 
@@ -13,4 +13,5 @@ sudo docker run -d \
 $CONTAINER_NAME
 # echo "$RESULT"
 
-# sudo docker logs $RESULT
+
+# docker run -d -p 5000:5000 --restart=always --name registry registry:2

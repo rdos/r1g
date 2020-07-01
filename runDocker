@@ -3,5 +3,5 @@
 ./RunDocker-gitlab.sh   
 ./RunDocker-rancher.sh  
 
-
+# public [ ˈpʌblik ] - общедоступный
 sudo docker ps 	
