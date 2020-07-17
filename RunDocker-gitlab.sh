@@ -1,5 +1,44 @@
 #!/bin/bash
 set -x
+
+
+
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+# set -e
+
+
+
 CONTAINER_NAME="gitlab/gitlab-ee"
 sudo docker stop "$(sudo docker ps -q  --filter ancestor=$CONTAINER_NAME --format="{{.ID}}")" 2>/dev/null
 
