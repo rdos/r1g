@@ -1,49 +1,12 @@
 #!/bin/bash
-set -x
-
-
-
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-# set -e
-
-
+set -e
 
 CONTAINER_NAME="gitlab/gitlab-ee"
 sudo docker stop "$(sudo docker ps -q  --filter ancestor=$CONTAINER_NAME --format="{{.ID}}")" 2>/dev/null
 
 
-sudo docker run -d \
+sudo docker run -d --restart=no \
+--name "con_$CONTAINER_NAME" \
 -p 8000:80 \
 -p 22:22 \
 -v $(pwd)/./volDocker/gitlab/etc/gitlab:/etc/gitlab \

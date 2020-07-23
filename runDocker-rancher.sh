@@ -5,6 +5,7 @@ sudo docker stop "$(sudo docker ps -q  --filter ancestor=$CONTAINER_NAME --forma
 # //TODO: │always!!!
 
 sudo docker run -d --restart=no \
+--name "con_$CONTAINER_NAME" \
 -p 4043:443 \
 -p 8001:80 \
 -v $(pwd)/./volDocker/rancher/var/lib/rancher:/var/lib/rancher \
