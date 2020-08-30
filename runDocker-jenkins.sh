@@ -1,4 +1,10 @@
-#!/bin/bashsudo docker run -d --restart=no \
+#!/bin/bash
+set -x
+echo ${0##*/}
+#!/ALWAYs
+
+
+# sudo docker run -d --restart=no \
 # --name "con_$CONTAINER_NAME" \
 # -p 8000:80 \
 # -p 22:22 \

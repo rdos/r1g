@@ -1,18 +1,22 @@
 #!/bin/bash
-set -e
+set -x
+echo ${0##*/}
+#!/ALWAYs
 
-CONTAINER_NAME="gitlab/gitlab-ee"
-sudo docker stop "$(sudo docker ps -q  --filter ancestor=$CONTAINER_NAME --format="{{.ID}}")" 2>/dev/null
 
+IMAGE_NM="gitlab/gitlab-ee"
+CONTAINER_NM="RGSgit"
+sudo docker stop $CONTAINER_NM 2>/dev/null
+sudo docker rm $CONTAINER_NM 2>/dev/null
 
 sudo docker run -d --restart=no \
---name "con_$CONTAINER_NAME" \
+--name $CONTAINER_NM \
 -p 8000:80 \
--p 22:22 \
+-p 2222:22 \
 -v $(pwd)/./volDocker/gitlab/etc/gitlab:/etc/gitlab \
 -v $(pwd)/./volDocker/gitlab/var/log/gitlab:/var/log/gitlab \
 -v $(pwd)/./volDocker/gitlab/var/opt/gitlab:/var/opt/gitlab \
-$CONTAINER_NAME
+$IMAGE_NM
 # echo "$RESULT"
 
 

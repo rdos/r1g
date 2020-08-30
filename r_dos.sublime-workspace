@@ -8,10 +8,231 @@
 	"buffers":
 	[
 		{
-			"contents": "openssl pkcs12 -in store.pfx -clcerts -nokeys -out domain.cer \nopenssl pkcs12 -in store.pfx -nocerts -nodes -out domain.key \nopenssl pkcs12 -in store.pfx -out domain.crt -nodes -nokeys -cacerts \nopenssl pkcs12 -in store.pfx -nocerts -out domain.pem -nodes \n",
+			"file": ".U/Docker-stop-all.sh",
 			"settings":
 			{
-				"buffer_size": 257,
+				"buffer_size": 90,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#!/bin/bash\n\necho ${0##*/}\n#!/ALWAYs\nsudo docker stop $(sudo docker ps -aq) 2>/dev/null\nsudo docker rm $(sudo docker ps -aq) 2>/dev/null\n\nsudo docker rmi -f  $(sudo docker images -aq) 2>/dev/null\nsudo docker volume rm $(sudo docker volume ls -q) 2>/dev/null\n\n\nsudo docker ps -a\nsudo docker images -a\n",
+			"file": ".U/Docker-RM-ALL--IN.sh",
+			"file_size": 289,
+			"file_write_time": 132402485117648893,
+			"settings":
+			{
+				"buffer_size": 300,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".U/Docker-bash.sh",
+			"settings":
+			{
+				"buffer_size": 91,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "runDocker-Gitlab.sh",
+			"settings":
+			{
+				"buffer_size": 543,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "runDocker-jenkins.sh",
+			"settings":
+			{
+				"buffer_size": 841,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "runDocker-Rancher.sh",
+			"settings":
+			{
+				"buffer_size": 752,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "runDocker-Registry.sh",
+			"settings":
+			{
+				"buffer_size": 263,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".Bash_Aliases",
+			"settings":
+			{
+				"buffer_size": 1712,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 30865 files for \"rc_ryndo\"\n\n/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/gitlab-secrets.json:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/gitlab.rb:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/ssh_host_ecdsa_key:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/ssh_host_ed25519_key:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/ssh_host_rsa_key:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/var/opt/gitlab/bootstrapped:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/var/opt/gitlab/gitlab-exporter/gitlab-exporter.yml:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/var/opt/gitlab/postgresql/.profile:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/var/opt/gitlab/postgresql/.s.PGSQL.5432.lock:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/containerd:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/crictl:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/ctr:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/k3s-agent:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/k3s-server:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/kubectl:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/etc/strongswan/ipsec.secrets:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/etc/strongswan/swanctl/swanctl.conf:\n    ERROR: Unable to open file\n\n0 matches\n\nSearching 30865 files for \"rc_a_ryndo\"\n\n/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/gitlab-secrets.json:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/gitlab.rb:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/ssh_host_ecdsa_key:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/ssh_host_ed25519_key:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/ssh_host_rsa_key:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/var/opt/gitlab/bootstrapped:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/var/opt/gitlab/gitlab-exporter/gitlab-exporter.yml:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/var/opt/gitlab/postgresql/.profile:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/var/opt/gitlab/postgresql/.s.PGSQL.5432.lock:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/containerd:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/crictl:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/ctr:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/k3s-agent:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/k3s-server:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/kubectl:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/etc/strongswan/ipsec.secrets:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/etc/strongswan/swanctl/swanctl.conf:\n    ERROR: Unable to open file\n\n0 matches\n\nSearching 30865 files for \"rc_a.ryndo\"\n\n/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/gitlab-secrets.json:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/gitlab.rb:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/ssh_host_ecdsa_key:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/ssh_host_ed25519_key:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/ssh_host_rsa_key:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/var/opt/gitlab/bootstrapped:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/var/opt/gitlab/gitlab-exporter/gitlab-exporter.yml:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/var/opt/gitlab/postgresql/.profile:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/gitlab/var/opt/gitlab/postgresql/.s.PGSQL.5432.lock:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/containerd:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/crictl:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/ctr:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/k3s-agent:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/k3s-server:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/bin/kubectl:\n    File too large, skipping\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/etc/strongswan/ipsec.secrets:\n    ERROR: Unable to open file\n\n/home/rdos/r_dos/volDocker/rancher/var/lib/rancher/k3s/data/7c4aaa633ac3ff4849166ba2759da158a70beb5734940e84b6e67011a35f4c59/etc/strongswan/swanctl/swanctl.conf:\n    ERROR: Unable to open file\n\n0 matches",
+			"settings":
+			{
+				"buffer_size": 7037,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "ANTI/.rc_a.r",
+			"settings":
+			{
+				"buffer_size": 97,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "/etc/profile\n\n",
+			"file": "ANTI/1.круг",
+			"file_size": 12,
+			"file_write_time": 132417101841591956,
+			"settings":
+			{
+				"buffer_size": 14,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "🎓 🐊🚀🙃😇😶😏___🚑🚒🚨🌙☀🌲🎄🎩🇺🇦🔑🗺",
+			"settings":
+			{
+				"buffer_size": 23,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/media/rdos/eca10029-e520-4bb2-9863-6705677a4dfa/2.txt",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "123",
+			"settings":
+			{
+				"buffer_size": 27,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/rdos/Downloads/anyconnect-linux64-4.6.04054-core-vpn-webdeploy-k9.sh",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": ".U/Docker-rm.sh",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": ".U/Docker-rm-ALL.sh",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": ".U/Docker-CLEAR-ALL.sh",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "RunDoc",
+			"settings":
+			{
+				"buffer_size": 153,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "RunDocker-gitlab.sh",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "runDocker-rancher.sh",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "runDockerRegistry.sh",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/1.круг",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -24,45 +245,10 @@
 			}
 		},
 		{
-			"file": "/home/rdos/Downloads/РАЗ....",
-			"settings":
-			{
-				"buffer_size": 277,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "РАЗ...."
-			}
-		},
-		{
-			"file": "/home/rdos/Downloads/Release",
-			"settings":
-			{
-				"buffer_size": 159,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "runDocker",
-			"settings":
-			{
-				"buffer_size": 134,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "КООРДИНАТЫ",
-			"file": ".КАК",
-			"file_size": 20,
-			"file_write_time": 132382549824023795,
-			"settings":
-			{
-				"buffer_size": 10,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"contents": "",
+			"file": "/home/rdos/Downloads/РАЗ....",
+			"file_size": -1,
+			"file_write_time": -1,
 			"settings":
 			{
 				"buffer_size": 0,
@@ -70,12 +256,454 @@
 			}
 		},
 		{
-			"file": "runDocker-rancher.sh",
+			"contents": "",
+			"file": "/home/rdos/Downloads/Release",
+			"file_size": -1,
+			"file_write_time": -1,
 			"settings":
 			{
-				"buffer_size": 601,
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "runDocker",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": ".КАК",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/rdos/Downloads/Packages",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/rdos/.cache/.fr-XX4nBE/Packages",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/rdos/.cache/.fr-wCP6cI/Packages",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/rdos/Downloads/Contents-amd64",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/rdos/Downloads/Release (1)",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "runRegistry.sh",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "volDocker/gitlab/etc/gitlab/gitlab.rb",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".REPO/gitlab-clone/Rakefile",
+			"settings":
+			{
+				"buffer_size": 461,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".REPO/gitlab-clone/README.md",
+			"settings":
+			{
+				"buffer_size": 7094,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "runDocker-gitlab.sh",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 56,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": ".ЧТО",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": ".ЗАЧЕМ",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "1.log",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Build.sh",
+			"settings":
+			{
+				"buffer_size": 48,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/rdos/Downloads/crossover-19.0.2/CrossOver.app/Contents/PkgInfo",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/rdos/Downloads/crossover-19.0.2/CrossOver.app/Contents/Resources/ja.lproj/DemoRegister.strings",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/rdos/Downloads/crossover-19.0.2/CrossOver.app/Contents/Resources/sk.lproj/AddDependenciesView.strings",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/rdos/Downloads/crossover-19.0.2/CrossOver.app/Contents/Resources/sk.lproj/IconSectionView.strings",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/rdos/Downloads/crossover-19.0.2/CrossOver.app/Contents/Resources/Python/site.pyc",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/rdos/.ssh/id_rsa.pub",
+			"settings":
+			{
+				"buffer_size": 571,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "RunDocker-jenkins.sh",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/rdos/.bash_aliases",
+			"settings":
+			{
+				"buffer_size": 23,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": ".U/Docker-stop-all (copy).sh",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/rdos/.bashrc",
+			"settings":
+			{
+				"buffer_size": 3646,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "RunDocker-rancher.sh",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "RunDocker",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "RunDocker-jenkins\\.sh",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/rdos/Downloads/.rc_a.ryndo@msk.russb.org-00707.txt",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": ".rc_a.r",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/rdos/1",
+			"settings":
+			{
+				"buffer_size": 33960,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/rdos/Documents/1",
+			"settings":
+			{
+				"buffer_size": 52,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/rdos/.file.RDS.yml",
+			"settings":
+			{
+				"buffer_size": 488,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/rdos/Downloads/1_files/jquery.min.js",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "ВАША ИГРА\nvk.com/thr_0\nvk.com/thr_00\nvk.com/thr_000\nvk.com/thr_eba\nvk.com/thr_a\nvk.com/thr_ee\nvk.com/thr_ii\nvk.com/thr_o0o\nvk.com/thr_con\nvk.com/thr_123\nvk.com/thr_0\nvk.com/thr_1\nvk.com/thr_2\nvk.com/thr_3\nvk.com/thr_5\nvk.com/thr_6\nvk.com/thr_7\nvk.com/thr_8\nvk.com/thr_100\nvk.com/thr_101\nvk.com/thr_102\nvk.com/thr_103\nvk.com/thr_104\n///// vk.com/thr_105\nvk.com/thr_0  99\nvk.com/thr_200\nvk.com/thr_033\nvk.com/thr_33\nvk.com/thr_07\nvk.com/thr_12\nvk.com/thr_106\nvk.com/thr_yryrytter\nvk.com/thr_yryrytter1\nvk.com/thr_yryrytter2\nvk.com/thr_yryrytter3\\\nhttps://www.zcarot.com/curious\n3847783y62\n\ndfghdfuh\n\n12317\ne\nfku3g72!!!!!!!!!!",
+			"file": "ANTI/11",
+			"file_size": 549,
+			"file_write_time": 132416173468837379,
+			"settings":
+			{
+				"buffer_size": 623,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "r_dos.sublime-project",
+			"settings":
+			{
+				"buffer_size": 45,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "_CIT loopback tuning\nNot used yet\n_CIT loopback tuning finished\n",
+			"file": "/home/rdos/.cache/.fr-o9fDSq/ImportAT/Scripts/CIT_tune.log",
+			"file_size": 67,
+			"file_write_time": 132412670920000000,
+			"settings":
+			{
+				"buffer_size": 64,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/rdos/.cache/.fr-IsagOn/ImportAT/Scripts/cft_job.txt",
+			"file_size": 0,
+			"file_write_time": 132412670920000000,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "cmd params: \ncmd params:--l BUILD_2020_06_17_09_27_58_60852 --j  --autoclose true \ncmd params:--l BUILD_2020_06_17_09_27_58_99737 --j  --autoclose true --l BUILD_2020_06_17_09_27_58_60852 --j  --autoclose true \ncmd params:--l BUILD_2020_06_17_09_27_59_38812 --j  --autoclose true --l BUILD_2020_06_17_09_27_58_99737 --j  --autoclose true --l BUILD_2020_06_17_09_27_58_60852 --j  --autoclose true \ncmd params:--l BUILD_2020_06_17_09_27_59_82183 --j  --autoclose true --l BUILD_2020_06_17_09_27_59_38812 --j  --autoclose true --l BUILD_2020_06_17_09_27_58_99737 --j  --autoclose true --l BUILD_2020_06_17_09_27_58_60852 --j  --autoclose true \ncmd params:--l BUILD_2020_06_17_09_28_00_26539 --j  --autoclose true --l BUILD_2020_06_17_09_27_59_82183 --j  --autoclose true --l BUILD_2020_06_17_09_27_59_38812 --j  --autoclose true --l BUILD_2020_06_17_09_27_58_99737 --j  --autoclose true --l BUILD_2020_06_17_09_27_58_60852 --j  --autoclose true \ncmd params: \ncmd params:--l BUILD_2020_06_17_09_28_22_37393 --j  --autoclose true \ncmd params:--l BUILD_2020_06_17_09_28_22_79863 --j  --autoclose true --l BUILD_2020_06_17_09_28_22_37393 --j  --autoclose true \ncmd params:--l BUILD_2020_06_17_09_28_23_21439 --j  --autoclose true --l BUILD_2020_06_17_09_28_22_79863 --j  --autoclose true --l BUILD_2020_06_17_09_28_22_37393 --j  --autoclose true \ncmd params:--l BUILD_2020_06_17_09_28_23_63425 --j  --autoclose true --l BUILD_2020_06_17_09_28_23_21439 --j  --autoclose true --l BUILD_2020_06_17_09_28_22_79863 --j  --autoclose true --l BUILD_2020_06_17_09_28_22_37393 --j  --autoclose true \ncmd params:--l BUILD_2020_06_17_09_28_24_06019 --j  --autoclose true --l BUILD_2020_06_17_09_28_23_63425 --j  --autoclose true --l BUILD_2020_06_17_09_28_23_21439 --j  --autoclose true --l BUILD_2020_06_17_09_28_22_79863 --j  --autoclose true --l BUILD_2020_06_17_09_28_22_37393 --j  --autoclose true \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --parallel 1 --repeats 0 --retries 0 --rep allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --parallel 1 --repeats 0 --retries 0 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --parallel 1 --repeats 0 --retries 0 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --parallel 1 --repeats 0 --retries 0 --rep allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 1 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 1 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 3 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 3 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 1 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 3 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 3 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 3 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 1 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 1 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 3 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 3 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 3 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report html \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 1 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --parallel 1 --repeats 0 --retries 0 --rep allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 1 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --repeats 0 --retries 0 --parallel 1 --report allure \ncmd params:--c TKB_IBSpre --codepage 65001 --autoclose true --profile Testrail --testrun 1 --retest_only --repeats 0 --retries 0 --parallel 1 --report allure \n",
+			"file": "/home/rdos/Share-rdp/args.txt",
+			"file_size": 8191,
+			"file_write_time": 132405870334493360,
+			"settings":
+			{
+				"buffer_size": 8138,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[Autorun]\nOpen=HiSuiteDownLoader.exe\nIcon=HiSuite.ico\nLabel=HiSuite\n",
+			"file": "/media/rdos/HiSuite/Autorun.inf",
+			"file_size": 72,
+			"file_write_time": 130894809210000000,
+			"settings":
+			{
+				"buffer_size": 68,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "просто \"достойные\"люди\" RЯ😎дом.\nа Я сразу не понял🎓а 🎓что, зачем и как...\nбыло и было...\n\nОТ меня😎 мусора много было? 😎😎тебе подарок.\nне следил Я 3A...💎CЛЕДИ за БАЗАRОМ🎧🎙\nи УМ не поможет.\nЯ не думал.а слушать всех подряд... не стоило бы ЖК так?\n\nКОРОЧЕ🗺\nиначе было бы иначе\n.\n\nдо ЧелОвека, 2😎0 STрок. и 🎓 достучаться 100% нужно.\nТАКАЯ ИГРА.\n\nя в ком уСЛОВНО🎓 6 ЛЕТ ДАЛb И.\nсудья явно была довольна собой!\nпух.🎩 @thr_😔 🥀вин🥂и🎓а?) 🎩пух.\n\n\n\n\n\n\n\n\n\nя не забуду тот день, 13-ого лета\nгде-то на севере китая учился курить в затяг,\nлюди только начинали правильно писать \"2pac\".\nзаценил клип nas'a вместе с lauryn hill\nи подумал про vanilla ice'а: \"он - полный дебил\",\n\nа сейчас я читаю всё это без блокнота,\nа сейчас семь утра, я на кухне с ручкой и блокнотом\n\nкак это было давно...\nи написал вот это для моего народа...",
+			"file": "ANTI/2.крю",
+			"file_size": 1399,
+			"file_write_time": 132402715803159042,
+			"settings":
+			{
+				"buffer_size": 812,
+				"line_ending": "Unix",
+				"name": "просто \"достойные\"люди\" RЯ😎дом."
 			}
 		}
 	],
@@ -90,6 +718,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
 			[
 				"syn\\",
 				"Set Syntax: YAML"
@@ -134,27 +766,44 @@
 	],
 	"file_history":
 	[
+		"/home/rdos/r_dos/🎓 🐊🚀🙃😇😶😏___🚑🚒🚨🌙☀🌲🎄🎩🇺🇦🔑🗺",
+		"/media/rdos/eca10029-e520-4bb2-9863-6705677a4dfa/2.txt",
+		"/home/rdos/r_dos/123",
+		"/home/rdos/Downloads/anyconnect-linux64-4.6.04054-core-vpn-webdeploy-k9.sh",
+		"/home/rdos/r_dos/.U/Docker-rm.sh",
+		"/home/rdos/r_dos/runDocker-Rancher.sh",
+		"/home/rdos/r_dos/runDocker-Gitlab.sh",
+		"/home/rdos/r_dos/.U/Docker-rm-ALL.sh",
+		"/home/rdos/r_dos/.Bash_Aliases",
+		"/home/rdos/r_dos/.U/Docker-CLEAR-ALL.sh",
+		"/home/rdos/r_dos/RunDoc",
+		"/home/rdos/r_dos/RunDocker-gitlab.sh",
+		"/home/rdos/r_dos/runDocker-rancher.sh",
+		"/home/rdos/r_dos/runDocker-Registry.sh",
+		"/home/rdos/r_dos/runDockerRegistry.sh",
+		"/home/rdos/r_dos/ANTI/1.круг",
+		"/1.круг",
+		"/home/rdos/r_dos/runDocker-jenkins.sh",
+		"/etc/apt/sources.list",
+		"/home/rdos/Downloads/РАЗ....",
+		"/home/rdos/r_dos/.U/Docker-bash.sh",
+		"/home/rdos/Downloads/Release",
+		"/home/rdos/r_dos/runDocker",
+		"/home/rdos/r_dos/.КАК",
 		"/home/rdos/r_dos/ANTI/.rc_a.r",
 		"/home/rdos/Downloads/Packages",
 		"/home/rdos/.cache/.fr-XX4nBE/Packages",
 		"/home/rdos/.cache/.fr-wCP6cI/Packages",
 		"/home/rdos/Downloads/Contents-amd64",
 		"/home/rdos/Downloads/Release (1)",
-		"/home/rdos/r_dos/RunDocker-gitlab.sh",
-		"/home/rdos/r_dos/123",
-		"/home/rdos/r_dos/.Bash_Aliases",
 		"/home/rdos/r_dos/runRegistry.sh",
 		"/home/rdos/r_dos/volDocker/gitlab/etc/gitlab/gitlab.rb",
 		"/home/rdos/r_dos/.REPO/gitlab-clone/Rakefile",
 		"/home/rdos/r_dos/.REPO/gitlab-clone/README.md",
-		"/home/rdos/r_dos/.U/Docker-bash.sh",
-		"/home/rdos/r_dos/runDocker-jenkins.sh",
 		"/home/rdos/r_dos/runDocker-gitlab.sh",
 		"/home/rdos/r_dos/.gitignore",
-		"/home/rdos/r_dos/runDocker-rancher.sh",
 		"/home/rdos/r_dos/.ЧТО",
 		"/home/rdos/r_dos/.ЗАЧЕМ",
-		"/home/rdos/r_dos/.КАК",
 		"/home/rdos/r_dos/1.log",
 		"/home/rdos/r_dos/Build.sh",
 		"/home/rdos/Downloads/crossover-19.0.2/CrossOver.app/Contents/PkgInfo",
@@ -164,7 +813,6 @@
 		"/home/rdos/Downloads/crossover-19.0.2/CrossOver.app/Contents/Resources/Python/site.pyc",
 		"/home/rdos/.ssh/id_rsa.pub",
 		"/home/rdos/r_dos/RunDocker-jenkins.sh",
-		"/home/rdos/r_dos/.U/Docker-CLEAR-ALL.sh",
 		"/home/rdos/.bash_aliases",
 		"/home/rdos/r_dos/.U/Docker-stop-all (copy).sh",
 		"/home/rdos/.bashrc",
@@ -199,9 +847,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 98.0,
 		"where_history":
 		[
+			"/home/rdos/r_dos"
 		]
 	},
 	"find_state":
@@ -209,6 +858,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"rc_a.ryndo",
+			"rc_a_ryndo",
+			"rc_ryndo",
+			"sudo",
+			"\\\n",
 			"x",
 			"— ",
 			"-",
@@ -235,15 +889,100 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 11,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": ".U/Docker-stop-all.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 257,
+						"buffer_size": 90,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								90,
+								90
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 67,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".U/Docker-RM-ALL--IN.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								36,
+								36
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 66,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": ".U/Docker-bash.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 91,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								36,
+								36
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 65,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "runDocker-Gitlab.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 543,
 						"regions":
 						{
 						},
@@ -262,109 +1001,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/etc/apt/sources.list",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3543,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3480,
-								3480
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 105.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/home/rdos/Downloads/РАЗ....",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 277,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								277,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_name": "РАЗ....",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/home/rdos/Downloads/Release",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 159,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								100,
-								100
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
+					"stack_index": 64,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "runDocker",
+					"file": "runDocker-jenkins.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 134,
+						"buffer_size": 841,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								117,
-								117
+								43,
+								43
 							]
 						],
 						"settings":
@@ -375,24 +1029,170 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 62,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": ".КАК",
+					"file": "runDocker-Rancher.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10,
+						"buffer_size": 752,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10,
-								10
+								43,
+								43
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 63,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "runDocker-Registry.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 263,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43,
+								43
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 61,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": ".Bash_Aliases",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1712,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								123,
+								123
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 60,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7037,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4692,
+								4692
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 3,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1905.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 59,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "ANTI/.rc_a.r",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 97,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								84,
+								84
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/R/R.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 54,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "ANTI/1.круг",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								14
 							]
 						],
 						"settings":
@@ -403,11 +1203,96 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 51,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 11,
+					"file": "🎓 🐊🚀🙃😇😶😏___🚑🚒🚨🌙☀🌲🎄🎩🇺🇦🔑🗺",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/media/rdos/eca10029-e520-4bb2-9863-6705677a4dfa/2.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 50,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "123",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 27,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 49,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/home/rdos/Downloads/anyconnect-linux64-4.6.04054-core-vpn-webdeploy-k9.sh",
 					"semi_transient": false,
 					"settings":
 					{
@@ -430,24 +1315,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 48,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "runDocker-rancher.sh",
+					"buffer": 15,
+					"file": ".U/Docker-rm.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 601,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								206,
-								206
+								0,
+								0
 							]
 						],
 						"settings":
@@ -458,7 +1343,1497 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 47,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": ".U/Docker-rm-ALL.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 46,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": ".U/Docker-CLEAR-ALL.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 45,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "RunDoc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 153,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 44,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "RunDocker-gitlab.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 43,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "runDocker-rancher.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 42,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "runDockerRegistry.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 41,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "/1.круг",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 40,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "/etc/apt/sources.list",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3543,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 39,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "/home/rdos/Downloads/РАЗ....",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 38,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "/home/rdos/Downloads/Release",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 37,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "runDocker",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 36,
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": ".КАК",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 35,
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "/home/rdos/Downloads/Packages",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 34,
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"file": "/home/rdos/.cache/.fr-XX4nBE/Packages",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 33,
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "/home/rdos/.cache/.fr-wCP6cI/Packages",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 32,
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "/home/rdos/Downloads/Contents-amd64",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 31,
+					"type": "text"
+				},
+				{
+					"buffer": 32,
+					"file": "/home/rdos/Downloads/Release (1)",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 30,
+					"type": "text"
+				},
+				{
+					"buffer": 33,
+					"file": "runRegistry.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 29,
+					"type": "text"
+				},
+				{
+					"buffer": 34,
+					"file": "volDocker/gitlab/etc/gitlab/gitlab.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 28,
+					"type": "text"
+				},
+				{
+					"buffer": 35,
+					"file": ".REPO/gitlab-clone/Rakefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 461,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 27,
+					"type": "text"
+				},
+				{
+					"buffer": 36,
+					"file": ".REPO/gitlab-clone/README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7094,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 26,
+					"type": "text"
+				},
+				{
+					"buffer": 37,
+					"file": "runDocker-gitlab.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 38,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 56,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Git Formats/Git Ignore.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 39,
+					"file": ".ЧТО",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				},
+				{
+					"buffer": 40,
+					"file": ".ЗАЧЕМ",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 41,
+					"file": "1.log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 42,
+					"file": "Build.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 48,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 43,
+					"file": "/home/rdos/Downloads/crossover-19.0.2/CrossOver.app/Contents/PkgInfo",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 44,
+					"file": "/home/rdos/Downloads/crossover-19.0.2/CrossOver.app/Contents/Resources/ja.lproj/DemoRegister.strings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 45,
+					"file": "/home/rdos/Downloads/crossover-19.0.2/CrossOver.app/Contents/Resources/sk.lproj/AddDependenciesView.strings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 46,
+					"file": "/home/rdos/Downloads/crossover-19.0.2/CrossOver.app/Contents/Resources/sk.lproj/IconSectionView.strings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 47,
+					"file": "/home/rdos/Downloads/crossover-19.0.2/CrossOver.app/Contents/Resources/Python/site.pyc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 48,
+					"file": "/home/rdos/.ssh/id_rsa.pub",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 49,
+					"file": "RunDocker-jenkins.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 50,
+					"file": "/home/rdos/.bash_aliases",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 51,
+					"file": ".U/Docker-stop-all (copy).sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 52,
+					"file": "/home/rdos/.bashrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3646,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 53,
+					"file": "RunDocker-rancher.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 54,
+					"file": "RunDocker",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 55,
+					"file": "RunDocker-jenkins\\.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 56,
+					"file": "/home/rdos/Downloads/.rc_a.ryndo@msk.russb.org-00707.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 57,
+					"file": ".rc_a.r",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/R/R.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 58,
+					"file": "/home/rdos/1",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 33960,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 59,
+					"file": "/home/rdos/Documents/1",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 52,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 60,
+					"file": "/home/rdos/.file.RDS.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 488,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 61,
+					"file": "/home/rdos/Downloads/1_files/jquery.min.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 62,
+					"file": "ANTI/11",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 623,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								544,
+								544
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 53,
+					"type": "text"
+				},
+				{
+					"buffer": 63,
+					"file": "r_dos.sublime-project",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 45,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 52,
+					"type": "text"
+				},
+				{
+					"buffer": 64,
+					"file": "/home/rdos/.cache/.fr-o9fDSq/ImportAT/Scripts/CIT_tune.log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 64,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								64,
+								64
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 58,
+					"type": "text"
+				},
+				{
+					"buffer": 65,
+					"file": "/home/rdos/.cache/.fr-IsagOn/ImportAT/Scripts/cft_job.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 57,
+					"type": "text"
+				},
+				{
+					"buffer": 66,
+					"file": "/home/rdos/Share-rdp/args.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8138,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 55,
+					"type": "text"
+				},
+				{
+					"buffer": 67,
+					"file": "/media/rdos/HiSuite/Autorun.inf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 68,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 56,
+					"type": "text"
+				},
+				{
+					"buffer": 68,
+					"file": "ANTI/2.крю",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 812,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								812,
+								812
+							]
+						],
+						"settings":
+						{
+							"auto_name": "просто \"достойные\"люди\" RЯ😎дом.",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 68,
 					"type": "text"
 				}
 			]
@@ -513,6 +2888,14 @@
 		"selected_items":
 		[
 			[
+				"run",
+				"RunDocker-gitlab.sh"
+			],
+			[
+				"Rund",
+				"runDockerRegistry.sh"
+			],
+			[
 				"R",
 				"RunDocker-gitlab.sh"
 			]
@@ -545,7 +2928,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 288.0,
+	"side_bar_width": 244.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

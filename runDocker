@@ -1,8 +1,0 @@
-#!/bin/bash
-. ~/.bash_aliases
-./runDockerRegistry.sh
-./RunDocker-gitlab.sh   
-./RunDocker-rancher.sh  
-
-# public [ ˈpʌblik ] - общедоступный
-sudo docker ps 	
